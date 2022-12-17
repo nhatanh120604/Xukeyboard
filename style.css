@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 250px;
+  }
+
+.navli, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+   
+}
+.logo
+{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links li
+{
+    display: inline-block;
+    padding: 0px 25px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    color:#0088a9;
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #24252A;
+    padding: 30px 6%;
+    width: 100%;
+}
+body
+{
+    width:100%;
+    height: 100vh;
+    background: #162052;
+    
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#button-bot
+{
+    margin: 100px auto;
+    
+}
+section
+{
+   min-height: 100%;
+   width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.part
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10%;
+    overflow: hidden;
+    transition: 1s;
+}
+.part::before
+{
+    content:'';
+    position: absolute;
+    inset: -80px 80px;
+    background:linear-gradient(315deg, #00ccff, #d400d4);
+    transition: 1s;
+    animation: animate 4s linear infinite;
+}
+.part:hover:before
+{
+    inset: -90px -90px;
+    
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.part::after{
+    content: '';
+    position:absolute;
+    inset: 6px;
+    background-color:#162052;
+    border-radius: 10%;
+    z-index: 1;
+}
+.content
+{
+    position: absolute;
+    inset: 20px;
+    border: 6px solid #070a1c;
+    z-index: 3;
+    border-radius: 10%;
+    overflow: hidden;
+}
+.content img
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.part:hover .content img
+{
+    opacity: 0;
+}
+
+.part:hover
+{
+    transform: scale(2);
+}
+.part{
+    margin: 150px 200px;
+}
+.two
+{
+    margin: 300px 200px 150px 200px;
+}
+
+.name {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    position: relative;
+}
+
+.onpic{
+    
+    transition: 1s;
+    font-weight: 700;
+    font-size: 4em;
+    font-style: italic;
+    font-family: 'Poppins';
+    color: rgb(33, 233, 166);
+    text-align: center;
+}
+.part:hover .onpic{
+    color: white;
+    font-size: 1.5em;
+    display: block;
+    height: 10%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.part:hover .name{
+    display: block;
+    width: 100%;
+    height: 10%;
+}
+
+.part:hover .ulcontent {
+   
+    width: 80%;
+    position: relative;
+    margin-left: 50px;
+    text-indent: 0px;
+    line-height: 20px;
+    opacity: 100;
+  
+}
+
+.ulcontent{
+
+    display: block;
+    margin-top: 50px;
+    opacity: 0;
+    color: white;
+}
+.switch
+{
+    display: block;
+    margin-top: 20px;
+    opacity: 0;
+    color: white;
+    font-size: 14px;
+}
+.opickickstand{
+    
+    transition: 1s;
+    font-weight: 700;
+    font-size: 3.5em;
+    font-style: italic;
+    font-family: 'Poppins';
+    color: rgb(33, 233, 166);
+}
+#linktocheckbat
+{
+    color:red;
+    font-style: italic;
+    transition: all 0.3s ease 0s;
+}
+#linktocheckbat:hover{
+    color: #00ccff;
+}
+span{
+    color: red;
+    font-style: italic;
+}
